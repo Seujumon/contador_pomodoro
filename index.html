@@ -8,9 +8,24 @@
 </head>
 <body>
 
-	<h1>Cronometro</h1>
+	<h1>Temporizador</h1>
+
+	<h2>¿Cuantos minutos durará el temporizador?</h2>
+	<label for="mins">Minutos: </label>
+	<input type="number" name="mins" id="mins" min="0" value="0">
+	<label for="segs">Segundos:</label>
+	<input type="number" name="segs" id="segs" min="0" max="59" value="0">
+	<button type="submit" name="inicio" id="inicio" >Iniciar</button>
+	
+	<button type="submit" name="detener" id="detener" >Detener</button>
+
+	<button type="submit" name="continuar" id="continuar" >Continuar</button>
+
+	<button type="submit" name="audio" id="audio" >Detener Audio</button>
+
+
 	<fieldset>
-		<legend id="nombre">Cronometro</legend>
+		<legend id="total">Cronometro</legend>
 		<h2 id="cronometro"></h2>
 	</fieldset>
 
