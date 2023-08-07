@@ -1,0 +1,66 @@
+body{
+	background-color: blueviolet;
+	color: whitesmoke;
+	font-family: Helvetica;
+}
+.contenedor{
+	margin: auto 300px ;
+	text-align: center;
+}
+
+input[type="number"]{
+	border-radius: 50%;
+	text-align: center;
+	border: none;
+	width: 80px;
+	height: 80px;
+	font-size: 24px;
+	outline: none;
+	-moz-appearance: textfield;
+
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{
+	-webkit-appearence: none;
+	margin: 0;
+}
+input[type="number"]:hover{
+	transition: 1s;
+	background-color: purple;
+	color: whitesmoke;
+	cursor: pointer;
+}
+input[type="number"]:active{
+	transition: 1s;
+	background-color: purple;
+	color: whitesmoke;
+}
+
+
+.reloj{
+	margin-bottom: 25px;
+	padding: 20px;
+
+}
+.reloj h2{
+	font-size: 64px;
+}
+.botones{
+	margin-top: 15px ;
+}
+.botones button{
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	margin-inline: 4px;
+	 cursor: pointer;
+	 border: none;
+	border-radius: 50%;
+	padding: 15px;
+	width: 200px;
+	height: 60px; 
+}
+.botones button:hover{
+	transition: 1s;
+	background-color: purple;
+	color: whitesmoke;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contador</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="contenedor">
+	<h1>Temporizador</h1>
+
+	<h2>¿Cuantos durará el temporizador?</h2>
+	<div class="campos">
+
+		<label for="mins">Minutos: </label>
+		<input type="number" name="mins" id="mins" min="0" value="25">
+		<label for="segs">Segundos:</label>
+		<input type="number" name="segs" id="segs" min="0" max="59" value="00">
+
+	</div>
+
+	<div class="reloj"> 
+	<fieldset>
+		<legend id="total">Tiempo restante: </legend>
+		<h2 id="cronometro"></h2>
+	</fieldset>
+	</div>
+
+	<div class="botones"> 
+		<button type="submit" name="inicio" id="inicio" title="Precione para iniciar o reiniciar el cronómetro">Iniciar</button>
+		
+		<button type="submit" name="detener" id="detener" title="Presione para pausar o detener el cronómetro" >Detener</button>
+	</div>
+	<div class="botones"> 
+		<button type="submit" name="continuar" id="continuar" title="Presione para continuar el cronómetro desde el momento en que se pausó" >Continuar</button>
+
+		<button type="submit" name="audio" id="audio" title="Presione para pausar el sonido de la alarma" >Detener Audio</button>
+	</div>
+	
+	</div>
+
+	<script src="js/script.js"></script>
+	
+
+</body>
+</html>
