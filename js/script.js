@@ -1,8 +1,9 @@
 let mostrarTotal = document.getElementById('total');
 let mostrarCronometro = document.getElementById('cronometro');
+let tiempoIngresado = 1;
+let sound = new Audio('./sound/cancion.wav');
 
-
-let tiempo = 1*60;
+let tiempo = tiempoIngresado*60;
 
 
 function imprimirCronometro(){
@@ -26,7 +27,11 @@ function imprimirCronometro(){
 	
 	if(tiempo<0){
 		clearInterval(intervalo)
+		sound.play();
 	}
 }
+/**
+Puedo poner esto en una funcion, y referenciarla en cuanto el usuario 
+haga clic en el botón**/
 let intervalo = setInterval(imprimirCronometro, 1000);
 
