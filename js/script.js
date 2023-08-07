@@ -11,8 +11,24 @@ let sound = new Audio('./sound/trumpets-for-life.mp3');
 let intervalo;
 
 let tiempo;
+function comprobarTiempo(){
+	if((parseInt(tiempoIngresadomins.value, 10))<0){
+		tiempoIngresadomins.value = "0"
+
+	}
+	if((parseInt(tiempoIngresadosegs.value))<0){
+		tiempoIngresadosegs.value = "0"
+	}
+	if((parseInt(tiempoIngresadosegs.value))>59){
+		tiempoIngresadosegs.value = "59"
+	}
+}
 
 function mostrarTiempoSeteado(){
+	
+	comprobarTiempo();
+
+
 	tiempo = (parseInt(tiempoIngresadomins.value, 10)*60)+ parseInt(tiempoIngresadosegs.value);
 	let minutos= Math.trunc(tiempo/60);
 	let segundos = tiempo%60;
@@ -32,6 +48,7 @@ function mostrarTiempoSeteado(){
 }
 
 function asignarTiempo(){
+	comprobarTiempo();
 	tiempo = (parseInt(tiempoIngresadomins.value, 10)*60)+ parseInt(tiempoIngresadosegs.value);
 
 }
@@ -74,7 +91,10 @@ function stop(){
 
 function continuar(){
 	clearInterval(intervalo);
+	if(tiempo>=0){
+
 	intervalo = setInterval(imprimirCronometro, 1000);
+	}
 }
 function detenerAudio(){
 	sound.pause();
